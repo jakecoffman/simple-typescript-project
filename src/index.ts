@@ -1,9 +1,13 @@
-import _ from 'lodash';
+// @types/express v4.x
+import express, { Request, Response } from 'express';
 
-function getFirstElement<T>(list: _.List<T>): T | undefined {
-    return _.first(list); // _.first is a lodash function that gets the first element of an array or list
-}
+const app = express();
 
-const numbers = [1, 2, 3, 4, 5];
-const firstNumber = getFirstElement(numbers);
-console.log(firstNumber); // Output: 1
+app.get('/search', (req: Request, res: Response) => {
+    const searchTerm = req.query.term; // no error, `req.query` is `any`
+    res.send(`Search term is: ${searchTerm}`);
+});
+
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
