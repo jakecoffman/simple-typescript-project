@@ -4,10 +4,15 @@
   "description": "",
   "scripts": {
     "build": "tsc",
-    "dev": "node --env-file=.env --watch -r ts-node/register src/index.ts"
+    "dev": "node --env-file=.env --watch -r ts-node/register src/index.ts",
+    "test": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@types/lodash": "^4.0.0",
+    "lodash": "^4.0.0"
+  },
   "devDependencies": {
     "@types/node": "^22.5.1",
     "ts-node": "^10.9.2",
