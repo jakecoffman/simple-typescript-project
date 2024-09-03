@@ -10,8 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@actions/github": "^5.1.1",
-    "@actions/core": "^1.10.1"
+    "toucan-js": "3.4.0"
   },
   "devDependencies": {
     "@types/node": "^22.5.1",
